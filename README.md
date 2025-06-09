@@ -1,2 +1,6 @@
-# Representation Learning - UQ in LLMs
-Building on the results in the paper - Distinguishing the Knowable from the Unknowable with Language Models,  Gustaf Ahdritz, Tian Qin, Nikhil Vyas, Boaz Barak, and Benjamin L. Edelman and complementing their results
+# Representation Learning - Uncertainty Quantification in LLMs
+Building on the results in the paper - "Distinguishing the Knowable from the Unknowable with Language Models" by Gustaf Ahdritz, Tian Qin, Nikhil Vyas, Boaz Barak, and Benjamin L. Edelman and complementing their results through a series of experiments. I have used Pythia-410M and Pythia-1.4B as the base models and token level epistemic uncertainty is quantified by computing the entropy over the distribution. Two MLPs are trained as probes - an I/O probe and a Hidden-state probe.
+
+The results provide evidence that token-level hidden states of the smaller model encode information predictive of epistemic uncertainty, even when surface-level outputs such as logits do not. This supports the hypothesis that uncertainty can be reflected in internal representations, aligning with recent mechanistic interpretability perspectives.
+
+ This evidence remains correlational. We cannot yet claim that the small model “understands” or “represents epistemic uncertainty” definitively, it is suggestive but not causal. While the hidden state appears to contain more useful signal than surface outputs, the mechanism behind this encoding remains unclear.
